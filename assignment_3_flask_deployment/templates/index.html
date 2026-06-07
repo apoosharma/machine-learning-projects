@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>House Price Predictor</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 500px; margin: 40px auto; }
+        input { width: 100%; padding: 6px; margin: 4px 0 12px 0; box-sizing: border-box; }
+        button { padding: 10px 20px; background: steelblue; color: white; border: none; cursor: pointer; }
+        .result { margin-top: 20px; font-size: 1.3em; font-weight: bold; color: green; }
+    </style>
+</head>
+<body>
+    <h2>🏠 House Price Predictor</h2>
+    <p>California Housing Dataset — Linear Regression</p>
+
+    <form action="/predict" method="POST">
+        <label>Median Income (e.g. 3.5 = $35,000):</label>
+        <input type="number" name="MedInc" step="any" placeholder="3.5" required>
+
+        <label>House Age (years):</label>
+        <input type="number" name="HouseAge" step="any" placeholder="20" required>
+
+        <label>Avg Rooms per Household:</label>
+        <input type="number" name="AveRooms" step="any" placeholder="5.0" required>
+
+        <label>Avg Bedrooms per Household:</label>
+        <input type="number" name="AveBedrms" step="any" placeholder="1.0" required>
+
+        <label>Block Population:</label>
+        <input type="number" name="Population" step="any" placeholder="1200" required>
+
+        <label>Avg Occupancy per Household:</label>
+        <input type="number" name="AveOccup" step="any" placeholder="3.0" required>
+
+        <label>Latitude:</label>
+        <input type="number" name="Latitude" step="any" placeholder="34.0" required>
+
+        <label>Longitude:</label>
+        <input type="number" name="Longitude" step="any" placeholder="-118.0" required>
+
+        <button type="submit">Predict Price</button>
+    </form>
+
+    {% if prediction %}
+        <div class="result">{{ prediction }}</div>
+    {% endif %}
+
+</body>
+</html>
