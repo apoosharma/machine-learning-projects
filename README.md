@@ -104,5 +104,5 @@ ml-assignments/
 
 ## 👩‍💻 Author
 
-**Apoorva** — ECE undergrad @ VIT Puducherry  
+**Apoorva** — ECE undergrad @ VIT 
 📎 [GitHub](https://github.com/apoosharma) • [LinkedIn](https://www.linkedin.com/in/apoorva-rr)
